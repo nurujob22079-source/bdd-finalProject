@@ -1,31 +1,16 @@
 {
-
-  "version": "0.2.0",
-
-  "configurations": [
-
-    {
-
-      "name": "Run Current Feature",
-
-      "type": "node",
-
-      "request": "launch",
-
-      "program": "${workspaceFolder}/node_modules/.bin/cucumber-js",
-
-      "args": [
-
-        "${file}"
-
-      ],
-
-      "cwd": "${workspaceFolder}",
-
-      "console": "integratedTerminal"
-
-    }
-
-  ]
-
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "types": ["node", "@playwright/test"],
+    "strict": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "features/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
